@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>Project2_Polymer</title>
+    <meta name="description" content="Project2_Polymer description">
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <script type="module" src="/src/project2-element/project2-container.js" crossorigin></script>
+    <script>
+      window.MyAppGlobals = { rootPath: '/' };
+    </script>
+    
+    <style>
+      body {
+        margin: 0;
+        font-family: "Roboto", "Noto", sans-serif;
+        line-height: 1.5;
+        min-height: 100vh;
+        background-color: #f4f7cf;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <project2-container></project2-container>
+    
+    <noscript>
+      Please enable JavaScript to view this website.
+    </noscript>
+
+  </body>
+</html>
