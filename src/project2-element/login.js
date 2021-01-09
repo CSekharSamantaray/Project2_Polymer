@@ -99,4 +99,5 @@ class AppLogin  extends PolymerElement {
   
 }
 
+//Finally register the current component to the browser.
 window.customElements.define('app-login', AppLogin);

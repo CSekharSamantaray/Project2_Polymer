@@ -1,0 +1,49 @@
+{
+"hotels":[
+	{
+		"hotelname": "Leela Kempinski Hotel", 
+		"addressline1": "Saki Naka, Andheri East",
+		"addressline2": "Mumbai, Maharashtra.",
+		"phoneno": "022 45567889",
+		"email": "hr@leelakempinski.org",
+		"website": "http://www.leelakempinski.org",
+		"image": "../img/leela.jpg"
+	},
+	{
+		"hotelname": "May Fair Lagoon Hotel", 
+		"addressline1": "East City, Chandrasekharpur",
+		"addressline2": "Bhubaneswar, Odisha.",
+		"phoneno": "0674 32659878",
+		"email": "hr@mayfairlagoon.in",
+		"website": "http://www.mayfairlagoon.in",
+		"image": "../img/mayfair.jpg"
+	},
+	{
+		"hotelname": "Taj Palace Hotel", 
+		"addressline1": "India Gate, Sea Beach Area",
+		"addressline2": "Mumbai, Maharashtra.",
+		"phoneno": "022 45563645",
+		"email": "info@tajpalacemumbai.com",
+		"website": "http://www.tajpalacemumbai.com",
+		"image": "../img/tajpalace.jpg"
+	},
+	{
+		"hotelname": "Country Inn Hotel", 
+		"addressline1": "Saileshree Vihar, Gandhi Road",
+		"addressline2": "Bhubaneswar, Odisha.",
+		"phoneno": "Phone No. :0674 32651245",
+		"email": "reachus@countryinnhotel.com",
+		"website": "http://www.countryinnhotel.com",
+		"image": "../img/hotel1.jpg"
+	},
+	{
+		"hotelname": "Ginger Hotel", 
+		"addressline1": "Outer Ring Road, Near Paul Heights",
+		"addressline2": "Bhubaneswar, Odisha.",
+		"phoneno": "0674 32656453",
+		"email": "contactus@gingerhotel.org",
+		"website": "http://www.gingerhotel.org",
+		"image": "../img/hotel2.jpg"
+	}
+]
+}

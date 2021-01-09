@@ -1,5 +1,6 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 import '@polymer/app-route/app-route.js';
+import './shared-styles.js';
 
 
 
@@ -11,25 +12,12 @@ import '@polymer/app-route/app-route.js';
 class AppContactus extends PolymerElement {
   static get template() {
     return html`
-        <style>
-            :host {
+        <style include="shared-styles">
+          :host {
             display: block;
-            }
+          }
             .div_searchForm {
-                margin: 10px;
-                padding: 10px;
-                color: #757575;
-                border-radius: 5px;
-                background-color: #d5e0c3;
                 width: 700px;
-                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-                display: inline-block;
-                padding-left: 15px;
-            }
-            .searchtitle {
-                font-size:1em; 
-                font-weight: bold; 
-                color: #006b80;
             }
         </style>
         
@@ -75,4 +63,5 @@ class AppContactus extends PolymerElement {
   }
 }
 
+//Finally register the current component to the browser.
 window.customElements.define('app-contactus', AppContactus);

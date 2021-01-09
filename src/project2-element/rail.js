@@ -3,82 +3,9 @@ import '@polymer/app-route/app-route.js';
 import '@polymer/paper-input/paper-input.js';
 import '@polymer/paper-button/paper-button.js';
 import '@vaadin/vaadin-date-picker/vaadin-date-picker.js';
+import '@polymer/iron-ajax/iron-ajax.js';
+import './shared-styles.js';
 
-
-let fList = [
-    {
-      trainid: '6E-2125',
-      name: 'Tejas Express',
-      departuretime: '06:25',
-      departurefrom: 'Bangalore',
-      arrivaltime: '09:45',
-      destination: 'Mumbai',
-      seattypes: {
-        actypes:"Executive Chair, First Class, Two-Tier Class",
-        nonactypes: "Sleeper Class, Second Class, General Class"
-      }
-    },
-    {
-      trainid: '6E-5354',
-      name: 'Duronto Express',
-      departuretime: '09:20',
-      departurefrom: 'Bangalore',
-      arrivaltime: '12:45',
-      destination: 'Mumbai',
-      seattypes: {
-        actypes:"Executive Chair, First Class, Two-Tier Class",
-        nonactypes: "Sleeper Class, Second Class, General Class"
-      }
-    },
-    {
-      trainid: 'I5-560 | I5-924',
-      name: 'Shatabdi Express',
-      departuretime: '13:20',
-      departurefrom: 'Bangalore',
-      arrivaltime: '16:45',
-      destination: 'Mumbai',
-      seattypes: {
-        actypes:"Executive Chair, First Class, Two-Tier Class",
-        nonactypes: "Sleeper Class, Second Class, General Class"
-      }
-    },
-    {
-      trainid: 'I5-993 | I5-1543',
-      name: 'Rajdhani Express',
-      departuretime: '13:20',
-      departurefrom: 'Bangalore',
-      arrivaltime: '16:45',
-      destination: 'Mumbai',
-      seattypes: {
-        actypes:"Executive Chair, First Class, Two-Tier Class",
-        nonactypes: "Sleeper Class, Second Class, General Class"
-      }
-    },
-    {
-      trainid: '6E-4012',
-      name: 'Gatiman Express',
-      departuretime: '11:00',
-      departurefrom: 'Bangalore',
-      arrivaltime: '14:10',
-      destination: 'Mumbai',
-      seattypes: {
-        actypes:"Executive Chair, First Class, Two-Tier Class",
-        nonactypes: "Sleeper Class, Second Class, General Class"
-      }
-    },
-    {
-      trainid: 'UK-995 | UK-851',
-      name: 'Suvidha Express',
-      departuretime: '11:10',
-      departurefrom: 'Bangalore',
-      arrivaltime: '14:25',
-      destination: 'Mumbai',
-      seattypes: {
-        actypes:"Executive Chair, First Class, Two-Tier Class",
-        nonactypes: "Sleeper Class, Second Class, General Class"
-      }
-    }
-];
 
 /**
  * @customElement
@@ -91,69 +18,11 @@ let fList = [
 class AppRail extends PolymerElement {
   static get template() {
     return html`
-        <style>
+        <style include="shared-styles">
             :host {
-            display: block;
+              display: block;
             }
-            .div_searchForm {
-                margin: 10px;
-                padding: 10px;
-                color: #757575;
-                border-radius: 5px;
-                background-color: #d5e0c3;
-                max-width: 800px;
-                min-width: 700px;
-                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-                display: inline-block;
-                padding-left: 15px;
-            }
-            .searchControls {
-                width: 120px;
-                margin-left: 24px;
-                float: left;
-            }
-            .searchtitle {
-              font-size:1em; 
-              font-weight: bold; 
-              color: #006b80;
-            }
-            .traindetail{
-                margin: 10px;
-                padding: 10px;
-                color: #757575;
-                border-radius: 5px;
-                background-color: #d5e0c3;
-                max-width: 800px;
-                min-width: 700px;
-                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-                display: inline-block;
-                padding-left: 15px;
-                margin-bottom: 5px;
-              }
-              #inputfrom {
-                margin-left: 0px;
-              }
-              #journeydate {
-                padding-top: 18px;
-              }
-              #searchbutton {
-                height: 35px; 
-                margin-top: 22px; 
-                background-color: #68d09d; 
-                color: #3c3b3b;
-              }
-              .errormessage {
-                display: none; 
-                color: #d61010; 
-                font-size: 14px;
-                margin-left: 0px;
-              }
-              #searchbutton {
-                height: 35px; 
-                margin-top: 22px; 
-                background-color: #68d09d; 
-                color: #3c3b3b;
-              }
+            
         </style>
       
         <app-header reveals>
@@ -176,33 +45,42 @@ class AppRail extends PolymerElement {
             <paper-button id="searchbutton" class="searchControls" raised  on-click="searchTrains">SEARCH</paper-button>
         </div>
     
-        <div id="divtrainsheading" class="traindetail" style="display: block; color: #006b80; max-width: 700px; height: 45px; padding-top: 5px; background-color: #bac; border-radius: 0px; margin-bottom: 0px; margin-top: 0px; display: none;">
-          <div style="display: inline-block; width: 120px; font-size: 13px;"><b>Train Name</b><br/><span style="font-size: 11px;">Train No.</span></div>
-          <div style="display: inline-block; width: 120px; font-size: 13px;"><b>From Station</b><br/><span style="font-size: 12px;">Departure Time</span></div>
-          <div style="display: inline-block; width: 120px; font-size: 13px;"><b>To Station</b><br/><span style="font-size: 12px;">Arrival Date/Time</span></div>
-          <div style="display: inline-block; width: 110px; font-size: 11px;"><b>Seat Types Available<b><br/><span style="font-size: 12px;"><b>AC<b><br/><b>Non AC<b></span></div>
+        <div id="divtrainsheading" class="traindetail">
+          <div class="headingTrains"><b>Train Name</b><br/><span>Train No.</span></div>
+          <div class="headingTrains"><b>From Station</b><br/><span>Departure Time</span></div>
+          <div class="headingTrains"><b>To Station</b><br/><span">Arrival Date/Time</span></div>
+          <div class="headingSeatDetails"><span>AC Seat Types<br/>Non AC Seat Types</span></div>
         </div>
 
         <div id="divtrainslist" style="display: none;">
           <dom-repeat items="[[trainslist]]">
             <template strip-whitespace="">
             <div class="traindetail">
-              <div style="display: inline-block; width: 120px; height: 52px; font-size: 14px;"><b>{{item.name}}</b><br/><span style="font-size: 11px;">{{item.trainid}}</span></div>
-              <div style="display: inline-block; width: 120px; height: 52px; font-size: 14px;"><b>{{item.departurefrom}}</b><br/><span style="font-size: 12px;">{{item.departuretime}}</span></div>
-              <div style="display: inline-block; width: 120px; height: 52px; font-size: 14px;"><b>{{item.destination}}</b><br/><span style="font-size: 12px;">{{item.arrivaltime}}</span></div>
-              <div style="display: inline-block; width: 257px; height: 52px; font-size: 11px;"><pre>{{item.seattypes.actypes}}<br/>{{item.seattypes.nonactypes}}</pre></div>
-              <paper-button raised class="bookflightbutton" style="height: 25px; font-size: 12px; margin-top: 10px; margin-left: 15px; margin-bottom: 0px; background-color: #68d09d; color: #3c3b3b;" on-click="">Book</paper-button>
+              <div class="detailTrains"><b>{{item.trainname}}</b><br/><span>{{item.trainid}}</span></div>
+              <div class="detailTrains"><b>{{item.departurefrom}}</b><br/><span>{{item.departuretime}}</span></div>
+              <div class="detailTrains"><b>{{item.destination}}</b><br/><span>{{item.arrivaltime}}</span></div>
+              <div class="detailSeatTypes">{{item.actypes}}<br/>{{item.nonactypes}}</div>
+              <paper-button raised class="booktrainbutton" disabled on-click="">Book</paper-button>
             </div>
             </template>
           </dom-repeat>
         </div>
+
+        <iron-ajax
+          id="trains_list_ajax"
+          url="json/trains.json"
+          params='{"part":"snippet", "q":"polymer", "type": "json"}'
+          handle-as="json"
+          on-response="handleTrainsResponse"
+          debounce-duration="300">
+        </iron-ajax>
     `;
   }
   static get properties() {
     return {
       trainslist: {
         type: Array,
-        value: fList,
+        value: [],
         notify: true
       }
     };
@@ -231,10 +109,19 @@ class AppRail extends PolymerElement {
     
     //Show the 2 divs containing the header and the search results if the vallidation is true.
     if (vallidated == true){
-      this.$.divtrainsheading.style.display = "block";
-      this.$.divtrainslist.style.display = "block";
+      this.$.trains_list_ajax.generateRequest();
     }
+  }
+
+  //Result handler function for iron-ajax control.
+  handleTrainsResponse(event, request) {
+    var response = request.response;  
+    this.trainslist = response.trains;
+    this.$.divtrainsheading.style.display = "block";
+    this.$.divtrainslist.style.display = "block";
   }
 }
 
+
+//Finally register the current component to the browser.
 window.customElements.define('app-rail', AppRail);

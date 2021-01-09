@@ -5,121 +5,9 @@ import '@polymer/paper-button/paper-button.js';
 import '@vaadin/vaadin-date-picker/vaadin-date-picker.js';
 import '@polymer/paper-radio-button/paper-radio-button.js';
 import '@polymer/paper-radio-group/paper-radio-group.js';
+import '@polymer/iron-ajax/iron-ajax.js';
+import './shared-styles.js';
 
-let fList = [
-  {
-    flightid: '6E-2125',
-    name: 'Indigo',
-    departuretime: '06:25',
-    departurefrom: 'Bangalore',
-    arrivaltime: '09:45',
-    destination: 'Mumbai',
-    baggage: {
-      adultcheckin:"15 kgs (1 peice only)",
-      adultcabin: "7 Kgs (1 piece only)",
-      childcheckin: "10 kgs (1 peice only)",
-      childcabin: "7 kgs (1 peice only)"
-    }
-  },
-  {
-    flightid: '6E-5354',
-    name: 'Indigo',
-    departuretime: '09:20',
-    departurefrom: 'Bangalore',
-    arrivaltime: '12:45',
-    destination: 'Mumbai',
-    baggage: {
-      adultcheckin:"15 kgs (1 peice only)",
-      adultcabin: "7 Kgs (1 piece only)",
-      childcheckin: "10 kgs (1 peice only)",
-      childcabin: "7 kgs (1 peice only)"
-    }
-  },
-  {
-    flightid: 'I5-560 | I5-924',
-    name: 'AirAsia',
-    departuretime: '13:20',
-    departurefrom: 'Bangalore',
-    arrivaltime: '16:45',
-    destination: 'Mumbai',
-    baggage: {
-      adultcheckin:"15 kgs (1 peice only)",
-      adultcabin: "7 Kgs (1 piece only)",
-      childcheckin: "10 kgs (1 peice only)",
-      childcabin: "7 kgs (1 peice only)"
-    }
-  },
-  {
-    flightid: 'I5-993 | I5-1543',
-    name: 'AirAsia',
-    departuretime: '13:20',
-    departurefrom: 'Bangalore',
-    arrivaltime: '16:45',
-    destination: 'Mumbai',
-    baggage: {
-      adultcheckin:"15 kgs (1 peice only)",
-      adultcabin: "7 Kgs (1 piece only)",
-      childcheckin: "10 kgs (1 peice only)",
-      childcabin: "7 kgs (1 peice only)"
-    }
-  },
-  {
-    flightid: '6E-4012',
-    name: 'Indigo',
-    departuretime: '11:00',
-    departurefrom: 'Bangalore',
-    arrivaltime: '14:10',
-    destination: 'Mumbai',
-    baggage: {
-      adultcheckin:"15 kgs (1 peice only)",
-      adultcabin: "7 Kgs (1 piece only)",
-      childcheckin: "10 kgs (1 peice only)",
-      childcabin: "7 kgs (1 peice only)"
-    }
-  },
-  {
-    flightid: 'UK-995 | UK-851',
-    name: 'Vistara',
-    departuretime: '11:10',
-    departurefrom: 'Bangalore',
-    arrivaltime: '14:25',
-    destination: 'Mumbai',
-    baggage: {
-      adultcheckin:"15 kgs (1 peice only)",
-      adultcabin: "7 Kgs (1 piece only)",
-      childcheckin: "10 kgs (1 peice only)",
-      childcabin: "7 kgs (1 peice only)"
-    }
-  },
-  {
-    flightid: 'AI-851 | AI-528',
-    name: 'Air India',
-    departuretime: '12:10',
-    departurefrom: 'Bangalore',
-    arrivaltime: '14:45',
-    destination: 'Mumbai',
-    baggage: {
-      adultcheckin:"15 kgs (1 peice only)",
-      adultcabin: "7 Kgs (1 piece only)",
-      childcheckin: "10 kgs (1 peice only)",
-      childcabin: "7 kgs (1 peice only)"
-    }
-  },
-  {
-    flightid: 'SG-2871 | SG-3024',
-    name: 'Spice Jet',
-    departuretime: '13:40',
-    departurefrom: 'Bangalore',
-    arrivaltime: '16:55',
-    destination: 'Mumbai',
-    baggage: {
-      adultcheckin:"15 kgs (1 peice only)",
-      adultcabin: "7 Kgs (1 piece only)",
-      childcheckin: "10 kgs (1 peice only)",
-      childcabin: "7 kgs (1 peice only)"
-    }
-  }
-];
 
 /**
  * @customElement
@@ -133,65 +21,9 @@ let fList = [
 class AppAviation extends PolymerElement {
   static get template() {
     return html`
-        <style>
+        <style include="shared-styles">
             :host {
                 display: block;
-            }
-            .div_searchForm {
-                margin: 10px;
-                padding: 10px;
-                color: #757575;
-                border-radius: 5px;
-                background-color: #d5e0c3;
-                max-width: 800px;
-                min-width: 700px;
-                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-                display: inline-block;
-                padding-left: 15px;
-            }
-            .flightdetail{
-              margin: 10px;
-              padding: 10px;
-              color: #757575;
-              border-radius: 5px;
-              background-color: #d5e0c3;
-              max-width: 800px;
-              min-width: 700px;
-              box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-              display: inline-block;
-              padding-left: 15px;
-              margin-bottom: 5px;
-            }
-            .searchControls {
-                width: 120px;
-                margin-left: 24px;
-                float: left;
-            }
-            #inputfrom {
-              margin-left: 0px;
-            }
-            #journeydate, #returndate {
-              padding-top: 18px;
-            }
-            .searchtitle {
-              font-size:1em; 
-              font-weight: bold; 
-              color: #006b80;
-            }
-            paper-radio-button {
-              padding-left: 0px;
-            }
-            #searchbutton {
-              height: 35px; 
-              margin-top: 22px; 
-              background-color: #68d09d; 
-              color: #3c3b3b;
-            }
-            .errormessage {
-              display: none; 
-              color: #d61010; 
-              font-size: 14px;
-              margin-left: 0px;
             }
         </style>
       
@@ -224,26 +56,35 @@ class AppAviation extends PolymerElement {
             <paper-button id="searchbutton" raised class="searchControls" on-click="searchFlights">SEARCH</paper-button>
         </div>
 
-        <div id="divflightsheading" class="flightdetail" style="color: #006b80; max-width: 700px; max-height: 35px; padding-top: 5px; background-color: #bac; border-radius: 0px; margin-bottom: 0px; margin-top: 0px; display: none;">
-          <div style="display: inline-block; min-width: 110px; max-width: 110px;font-size: 13px;"><b>Airlines</b><br/><span style="font-size: 11px;">Flight No.</span></div>
-          <div style="display: inline-block; min-width: 100px; max-width: 100px;font-size: 13px;"><b>Departure From</b><br/><span style="font-size: 12px;">Departure Time</span></div>
-          <div style="display: inline-block; min-width: 100px; max-width: 100px;font-size: 13px;"><b>Destination</b><br/><span style="font-size: 12px;">Arrival Time</span></div>
-          <div style="display: inline-block; min-width: 110px; font-size: 11px;"><b>BAGGAGE DETAILS<b></div>
+        <div id="divflightsheading" class="flightdetail">
+          <div class="headingAirlines"><b>Airlines</b><br/><span>Flight No.</span></div>
+          <div class="headingDeparture"><b>Departure From</b><br/><span>Departure Time</span></div>
+          <div class="headingDeparture"><b>Destination</b><br/><span>Arrival Time</span></div>
+          <div class="headingBaggageDetails">BAGGAGE DETAILS</div>
         </div>
 
         <div id="divflightlist" style="display: none;">
           <dom-repeat items="[[flightlist]]">
             <template strip-whitespace="">
             <div class="flightdetail">
-              <div style="display: inline-block; min-width: 110px; max-width: 110px;font-size: 14px;"><b>{{item.name}}</b><br/><span style="font-size: 11px;">{{item.flightid}}</span></div>
-              <div style="display: inline-block; min-width: 100px; max-width: 100px;font-size: 14px;"><b>{{item.departurefrom}}</b><br/><span style="font-size: 12px;">{{item.departuretime}}</span></div>
-              <div style="display: inline-block; min-width: 100px; max-width: 100px;font-size: 14px;"><b>{{item.destination}}</b><br/><span style="font-size: 12px;">{{item.arrivaltime}}</span></div>
-              <div style="display: inline-block; min-width: 110px; font-size: 11px;"><pre><span>ADULT : {{item.baggage.adultcheckin}}  {{item.baggage.adultcabin}}</span><br/><span>CHILD : {{item.baggage.childcheckin}}  {{item.baggage.childcabin}}</span></pre></div>
-              <paper-button raised class="bookflightbutton" style="height: 25px; font-size: 12px; margin-top: 10px; margin-left: 15px; margin-bottom: 0px; background-color: #68d09d; color: #3c3b3b;" on-click="">Book</paper-button>
+              <div class="detailAirlines"><b>{{item.flightname}}</b><br/><span>{{item.flightid}}</span></div>
+              <div class="detailDeparture"><b>{{item.departurefrom}}</b><br/><span>{{item.departuretime}}</span></div>
+              <div class="detailDeparture"><b>{{item.destination}}</b><br/><span>{{item.arrivaltime}}</span></div>
+              <div class="detailBaggage"><pre><span>ADULT : {{item.adultcheckin}}  {{item.adultcabin}}</span><br/><span>CHILD : {{item.childcheckin}}  {{item.childcabin}}</span></pre></div>
+              <paper-button raised class="bookflightbutton" disabled on-click="">Book</paper-button>
             </div>
             </template>
           </dom-repeat>
         </div>
+
+        <iron-ajax
+          id="flight_list_ajax"
+          url="json/flights.json"
+          params='{"part":"snippet", "q":"polymer", "type": "json"}'
+          handle-as="json"
+          on-response="handleFlightsResponse"
+          debounce-duration="300">
+        </iron-ajax>
     `;
   }
   static get properties() {
@@ -254,7 +95,7 @@ class AppAviation extends PolymerElement {
       },
       flightlist: {
         type: Array,
-        value: fList,
+        value: [],
         notify: true
       },
     };
@@ -293,12 +134,20 @@ class AppAviation extends PolymerElement {
       vallidated = false;
     
     
-    //Show the 2 divs containing the header and the search results if the vallidation is true.
+    //If Vallidation of the controls is true then call the iron ajax to get the results from the server side.
     if (vallidated == true){
-      this.$.divflightsheading.style.display = "block";
-      this.$.divflightlist.style.display = "block";
+      this.$.flight_list_ajax.generateRequest();
     }
+  }
+
+  //Result handler function for iron-ajax control.
+  handleFlightsResponse(event, request){
+    var response = request.response;  
+    this.flightlist = response.flights;
+    this.$.divflightsheading.style.display = "block";
+    this.$.divflightlist.style.display = "block";
   }
 }
 
+//Finally register the current component to the browser.
 window.customElements.define('app-aviation', AppAviation);

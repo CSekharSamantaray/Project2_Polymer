@@ -177,4 +177,5 @@ class AppContainer extends PolymerElement {
 }
 }
 
+//Finally register the current component to the browser.
 window.customElements.define('app-container', AppContainer);
