@@ -11,6 +11,8 @@
     "@polymer/paper-button": "^3.0.1",
     "@polymer/paper-icon-button": "^3.0.2",
     "@polymer/paper-input": "^3.2.1",
+    "@polymer/paper-radio-button": "^3.0.1",
+    "@polymer/paper-radio-group": "^3.0.1",
     "@polymer/polymer": "^3.0.0",
     "@vaadin/vaadin-date-picker": "^4.4.1"
   },
