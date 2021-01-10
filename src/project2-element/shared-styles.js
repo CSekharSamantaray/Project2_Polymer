@@ -10,8 +10,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         color: #757575;
         border-radius: 5px;
         background-color: #d5e0c3;
-        max-width: 600px;
-        min-width: 600px;
+        width: 702px;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
         display: flex;
       }
@@ -23,16 +22,27 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         margin-top: 0px;
       }
       .div_hotel_address{
-          font-size: 12px;
-          padding-left: 15px;
-          width: 300px;
+        font-size: 12px;
+        padding-left: 15px;
+        width: 220px;
+      }
+      .div_hotel_ratings {
+        padding-top: 55px;
+        width: 170px;
+      }
+      .div_hotel_ratings h5 {
+        color: #006b80;
+        margin-top: 0px;
+      }
+      .div_hotel_ratings span {
+        font-size : 12px;
       }
       .detailsbutton {
         width: 80px;
         margin-left: 10px;
         float: right;
         height: 25px; 
-        margin-top: 5px;
+        margin-top: 62px;
         background-color: #68d09d; 
         color: #3c3b3b;
         font-size: 12px;
@@ -49,12 +59,12 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
       color: #757575;
       border-radius: 5px;
       background-color: #d5e0c3;
-      max-width: 800px;
       min-width: 700px;
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
       display: inline-block;
       padding-left: 15px;
       margin-bottom: 5px;
+      height: 45px;
     }
     #divflightsheading{
       color: #006b80; 
@@ -189,12 +199,12 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
     color: #757575;
     border-radius: 5px;
     background-color: #d5e0c3;
-    max-width: 800px;
     min-width: 700px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
     display: inline-block;
     padding-left: 15px;
     margin-bottom: 5px;
+    height: 45px;
     }
     #inputfrom {
       margin-left: 0px;

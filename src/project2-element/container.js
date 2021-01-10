@@ -151,13 +151,13 @@ class AppContainer extends PolymerElement {
     // If no page was found in the route data, page will be an empty string.
     // Show 'login' in that case. And if the page doesn't exist, show 'pageNotFoundError404'.
 
-   if (!page ) {
-     this.page = 'app-login';
-   } else if (['app-login', 'app-hotels', 'app-aviation','app-rail','app-aboutus','app-contactus'].indexOf(page) !== -1) {
-     this.page = page;
-   } else {
-    this.page = 'pagenotfound';
-  }
+    if (!page ) {
+      this.page = 'app-login';
+    } else if (['app-login', 'app-hotels', 'app-aviation','app-rail','app-aboutus','app-contactus'].indexOf(page) !== -1) {
+      this.page = page;
+    } else {
+      this.page = 'pagenotfound';
+    }
     
    // Close a non-persistent drawer when the page & route are changed.
    if (!this.$.drawer.persistent) {
@@ -165,6 +165,7 @@ class AppContainer extends PolymerElement {
    }
  }
 
+ //_pageChanged Observer function definition.
  _pageChanged(page) {
   // Import the page component on demand.
   // Note: `polymer build` doesn't like string concatenation in the import

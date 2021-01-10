@@ -7,7 +7,9 @@
 		"phoneno": "022 45567889",
 		"email": "hr@leelakempinski.org",
 		"website": "http://www.leelakempinski.org",
-		"image": "../img/leela.jpg"
+		"image": "../img/leela.jpg",
+		"averagerating": "5 Star",
+		"ratingusers": "Out of 165 user reviews."
 	},
 	{
 		"hotelname": "May Fair Lagoon Hotel", 
@@ -16,7 +18,9 @@
 		"phoneno": "0674 32659878",
 		"email": "hr@mayfairlagoon.in",
 		"website": "http://www.mayfairlagoon.in",
-		"image": "../img/mayfair.jpg"
+		"image": "../img/mayfair.jpg",
+		"averagerating": "5 Star",
+		"ratingusers": "Out of 255 user reviews."
 	},
 	{
 		"hotelname": "Taj Palace Hotel", 
@@ -25,7 +29,9 @@
 		"phoneno": "022 45563645",
 		"email": "info@tajpalacemumbai.com",
 		"website": "http://www.tajpalacemumbai.com",
-		"image": "../img/tajpalace.jpg"
+		"image": "../img/tajpalace.jpg",
+		"averagerating": "5 Star",
+		"ratingusers": "Out of 205 user reviews."
 	},
 	{
 		"hotelname": "Country Inn Hotel", 
@@ -34,7 +40,9 @@
 		"phoneno": "Phone No. :0674 32651245",
 		"email": "reachus@countryinnhotel.com",
 		"website": "http://www.countryinnhotel.com",
-		"image": "../img/hotel1.jpg"
+		"image": "../img/hotel1.jpg",
+		"averagerating": "4 Star",
+		"ratingusers": "Out of 115 user reviews."
 	},
 	{
 		"hotelname": "Ginger Hotel", 
@@ -43,7 +51,9 @@
 		"phoneno": "0674 32656453",
 		"email": "contactus@gingerhotel.org",
 		"website": "http://www.gingerhotel.org",
-		"image": "../img/hotel2.jpg"
+		"image": "../img/hotel2.jpg",
+		"averagerating": "3 Star",
+		"ratingusers": "Out of 415 user reviews."
 	}
 ]
 }

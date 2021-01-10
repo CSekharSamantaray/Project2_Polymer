@@ -51,6 +51,10 @@ class AppHotels extends PolymerElement {
                     <span>[[item.email]]</span><br/>
                     <span>[[item.website]]</span>
                 </div>
+                <div class="div_hotel_ratings">
+                  <h5 style="margin-bottom: 0px;">Average Ratings : [[item.averagerating]]</h5>
+                  <span>[[item.ratingusers]]</span><br/>
+                </div>
                 <paper-button raised class="detailsbutton" on-click="" disabled >Details</paper-button>
               </div>
               </template>
