@@ -119,6 +119,8 @@ class AppContainer extends PolymerElement {
     </app-drawer-layout>
     `;
   }
+
+  //Declare the properties for this component.
   static get properties() {
     return {
       page: {
@@ -142,7 +144,8 @@ class AppContainer extends PolymerElement {
     ];
   }
 
-  //routePageChanged Observer function definition.
+  //_routePageChanged Observer function definition. This is required to be defined
+  //here as we are using app-route.js functionalities.
   _routePageChanged(page) {
     // Show the corresponding page according to the route.
     // If no page was found in the route data, page will be an empty string.
@@ -152,7 +155,9 @@ class AppContainer extends PolymerElement {
      this.page = 'app-login';
    } else if (['app-login', 'app-hotels', 'app-aviation','app-rail','app-aboutus','app-contactus'].indexOf(page) !== -1) {
      this.page = page;
-   } 
+   } else {
+    this.page = 'pagenotfound';
+  }
     
    // Close a non-persistent drawer when the page & route are changed.
    if (!this.$.drawer.persistent) {
@@ -188,9 +193,13 @@ class AppContainer extends PolymerElement {
     case 'app-contactus':
       import('./contactus.js');
       break;
+    case 'pagenotfound':
+      import('./pagenotfound.js');
+      break;
   }
 }
 
+//Document ready function definition.
 ready() {
   super.ready();
   

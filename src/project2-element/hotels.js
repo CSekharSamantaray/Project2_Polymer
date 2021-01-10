@@ -59,6 +59,8 @@ class AppHotels extends PolymerElement {
         </div>
     `;
   }
+
+  //Declare the properties for this component.
   static get properties() {
     return {
       hotelslist: {
@@ -68,6 +70,7 @@ class AppHotels extends PolymerElement {
     };
   }
 
+  //Result handler function for iron-ajax control which returns the list of hotels.
   handleHotelsResponse(event, request){
     var response = request.response;  
     this.hotelslist = response.hotels;

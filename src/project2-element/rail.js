@@ -76,6 +76,8 @@ class AppRail extends PolymerElement {
         </iron-ajax>
     `;
   }
+
+  //Declare the properties for this component.
   static get properties() {
     return {
       trainslist: {

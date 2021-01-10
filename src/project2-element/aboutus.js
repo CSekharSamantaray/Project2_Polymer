@@ -48,14 +48,7 @@ class AppAboutus extends PolymerElement {
 
     `;
   }
-  static get properties() {
-    return {
-      title: {
-        type: String,
-        value: 'About Us'
-      }
-    };
-  }
+
 }
 
 //Finally register the current component to the browser.

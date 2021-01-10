@@ -53,14 +53,7 @@ class AppContactus extends PolymerElement {
         
     `;
   }
-  static get properties() {
-    return {
-      title: {
-        type: String,
-        value: 'Contact Us'
-      }
-    };
-  }
+  
 }
 
 //Finally register the current component to the browser.

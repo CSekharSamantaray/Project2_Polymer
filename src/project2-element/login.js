@@ -57,6 +57,8 @@ class AppLogin  extends PolymerElement {
         
     `;
   }
+
+  //Declare the properties for this component.
   static get properties() {
     // Declare 2 properties for username and password.
     return {
@@ -71,6 +73,7 @@ class AppLogin  extends PolymerElement {
     };
   }
 
+  //Function definition for Login button click method.
   loginClick() {
     // Clear the Error message first if there is any.
     this.$.errormessage.innerText = "";

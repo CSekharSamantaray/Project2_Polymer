@@ -87,6 +87,8 @@ class AppAviation extends PolymerElement {
         </iron-ajax>
     `;
   }
+
+  //Declare the properties for this component.
   static get properties() {
     return {
       returndateenabled: {
@@ -132,7 +134,6 @@ class AppAviation extends PolymerElement {
       vallidated = false;
     if(this.$.returndate.validate() == false)
       vallidated = false;
-    
     
     //If Vallidation of the controls is true then call the iron ajax to get the results from the server side.
     if (vallidated == true){
