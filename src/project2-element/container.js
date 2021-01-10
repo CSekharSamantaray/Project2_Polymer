@@ -37,11 +37,15 @@ class AppContainer extends PolymerElement {
           display: block;
           background-color: #6f8e8390;
         }
+
         body{
           font-family: "Roboto", "Noto", sans-serif;
         }
         app-drawer-layout:not([narrow]) [drawer-toggle] {
           display: none;
+        }
+        app-drawer {
+          max-width: 1024px;
         }
         .drawer-list {
           margin: 0 20px;
@@ -63,6 +67,14 @@ class AppContainer extends PolymerElement {
         .pagestyle{
           max-width: 800px;
         }
+        .main-title{
+          color: white;
+        }
+        app-toolbar{
+          background-color: #006b80; 
+          color: white;
+        }
+        
       </style>
       
       <app-location route="{{route}}" url-space-regex="^[[rootPath]]">
@@ -74,8 +86,8 @@ class AppContainer extends PolymerElement {
       <app-drawer-layout fullbleed="" narrow="{{narrow}}" >
       <!-- Drawer content -->
       <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
-        <app-toolbar style="background-color: #006b80;">Menu</app-toolbar>
-        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation" style="background-color: #006b80;">
+        <app-toolbar>Menu</app-toolbar>
+        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="app-hotels" href="[[rootPath]]app-hotels">Hotels</a>
           <a name="app-aviation" href="[[rootPath]]app-aviation">Aviation</a>
           <a name="app-rail" href="[[rootPath]]app-rail">Rail</a>
@@ -91,7 +103,7 @@ class AppContainer extends PolymerElement {
         <app-header slot="header" condenses="" reveals="" effects="waterfall" id="myheader" >
           <app-toolbar >
             <paper-icon-button icon="my-icons:menu" drawer-toggle=""></paper-icon-button>
-            <div main-title="">TRAVEL AND TOURISM</div>
+            <div class="main-title">TRAVEL AND TOURISM</div>
           </app-toolbar>
         </app-header>
 
@@ -114,6 +126,10 @@ class AppContainer extends PolymerElement {
         reflectToAttribute: true,
         observer: '_pageChanged'
       },
+      username: {
+        type: String,
+        value:""
+      },
       routeData: Object,
       subroute: Object
     };
@@ -131,7 +147,6 @@ class AppContainer extends PolymerElement {
     // Show the corresponding page according to the route.
     // If no page was found in the route data, page will be an empty string.
     // Show 'login' in that case. And if the page doesn't exist, show 'pageNotFoundError404'.
-   let uname = sessionStorage.getItem('username');
 
    if (!page ) {
      this.page = 'app-login';
@@ -174,6 +189,13 @@ class AppContainer extends PolymerElement {
       import('./contactus.js');
       break;
   }
+}
+
+ready() {
+  super.ready();
+  
+  let uname = localStorage.getItem('username');
+  this.username= uname;
 }
 }
 
