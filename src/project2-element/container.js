@@ -50,10 +50,6 @@ class AppContainer extends PolymerElement {
         .drawer-list {
           margin: 0 20px;
         }
-        app-header {
-          color: #000;
-          background-color: #006b80;
-        }
         app-header paper-icon-button {
           --paper-icon-button-ink-color: white;
         }
@@ -64,14 +60,14 @@ class AppContainer extends PolymerElement {
           color: var(--app-secondary-color);
           line-height: 40px;
         }
-        .pagestyle{
+        .pagestyle {
           max-width: 800px;
         }
         .main-title{
           color: white;
         }
         app-toolbar{
-          background-color: #006b80; 
+          background-color: #66CCFF; 
           color: white;
         }
         
@@ -113,7 +109,7 @@ class AppContainer extends PolymerElement {
           <app-rail name="app-rail" class="pagestyle"></app-rail>
           <app-aboutus name="app-aboutus" class="pagestyle"></app-aboutus>
           <app-contactus name="app-contactus" class="pagestyle"></app-contactus>
-          <app-login name="app-login" class="pagestyle"></app-login>
+          <app-login name="app-login"></app-login>
         </iron-pages>
       </app-header-layout>
     </app-drawer-layout>

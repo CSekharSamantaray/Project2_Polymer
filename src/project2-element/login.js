@@ -47,10 +47,10 @@ class AppLogin  extends PolymerElement {
       
         <span class="appHeader">LOGIN FORM</span><br/>
         <paper-input label="Enter Username" id="inputusername" value="{{username}}" 
-                      error-message="Please enter vallid username." char-counter maxlength="15" 
+                      error-message="Please enter vallid username."  
                       required pattern="*"></paper-input>  
         <paper-input label="Enter Password" type="password" id="inputpassword" value="{{passkey}}" 
-                      error-message="Please enter your password." char-counter maxlength="15" 
+                      error-message="Please enter your password."  
                       required pattern="*"></paper-input><br/>
         <paper-button raised on-click="loginClick">LOGIN</paper-button><br/><br/>
         <span id="errormessage" class="errormessage"></span>

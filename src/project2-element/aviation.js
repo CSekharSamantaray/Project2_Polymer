@@ -7,6 +7,7 @@ import '@polymer/paper-radio-button/paper-radio-button.js';
 import '@polymer/paper-radio-group/paper-radio-group.js';
 import '@polymer/iron-ajax/iron-ajax.js';
 import './shared-styles.js';
+import './record_detail.js';
 
 
 /**
@@ -58,13 +59,13 @@ class AppAviation extends PolymerElement {
 
         <div id="divflightsheading" class="flightdetail">
           <div class="headingAirlines"><b>Airlines</b><br/><span>Flight No.</span></div>
-          <div class="headingDeparture"><b>Departure From</b><br/><span>Departure Time</span></div>
+          <div class="headingDeparture"><b>Departure</b><br/><span>Departure Time</span></div>
           <div class="headingDeparture"><b>Destination</b><br/><span>Arrival Time</span></div>
           <div class="headingBaggageDetails">BAGGAGE DETAILS</div>
         </div>
 
         <div id="divflightlist" style="display: none;">
-          <dom-repeat items="[[flightlist]]">
+          <!--<dom-repeat items="[[flightlist]]">
             <template strip-whitespace="">
             <div class="flightdetail">
               <div class="detailAirlines"><b>{{item.flightname}}</b><br/><span>{{item.flightid}}</span></div>
@@ -74,7 +75,9 @@ class AppAviation extends PolymerElement {
               <paper-button raised class="bookflightbutton" disabled on-click="">Book</paper-button>
             </div>
             </template>
-          </dom-repeat>
+          </dom-repeat>-->
+          <record-detail datalist="[[flightlist]]"></record-detail>
+
         </div>
 
         <iron-ajax

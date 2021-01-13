@@ -4,12 +4,18 @@ const $_documentContainer = document.createElement('template');
 $_documentContainer.innerHTML = `<dom-module id="shared-styles">
   <template>
     <style>
+    :root {
+      --searchBarBackground: #C4E5F5;
+      --searchHeadingBackground: #B0E0F7;
+      --searchRecordBackground: #D2ECF9;
+    }
+
       .card {
         margin: 10px;
         padding: 10px;
-        color: #757575;
+        color: #757575; 
         border-radius: 5px;
-        background-color: #d5e0c3;
+        background-color: var(--searchBarBackground);
         width: 702px;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
         display: flex;
@@ -58,7 +64,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
       padding: 10px;
       color: #757575;
       border-radius: 5px;
-      background-color: #d5e0c3;
+      background-color: var(--searchRecordBackground);
       min-width: 700px;
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
       display: inline-block;
@@ -71,7 +77,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
       max-width: 700px; 
       max-height: 35px; 
       padding-top: 5px; 
-      background-color: #bac; 
+      background-color: var(--searchHeadingBackground); 
       border-radius: 0px; 
       border: #828080 1px solid;
       margin-bottom: 0px; 
@@ -108,7 +114,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
     }
     .headingAirlines {
       display: inline-block; 
-      width: 105px; 
+      width: 116px; 
       font-size: 13px;
     }
     .headingAirlines span{
@@ -116,7 +122,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
     }
     .headingDeparture {
       display: inline-block; 
-      width: 95px; 
+      width: 116px; 
       font-size: 13px;
     }
     .headingDeparture span {
@@ -130,7 +136,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
     }
     .detailAirlines {
       display: inline-block; 
-      width: 110px; 
+      width: 120px; 
       font-size: 14px;
     }
     .detailAirlines span {
@@ -138,7 +144,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
     }
     .detailDeparture {
       display: inline-block; 
-      width: 100px; 
+      width: 118px; 
       font-size: 14px;
     }
     .detailDeparture span {
@@ -146,14 +152,12 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
     }
     .detailBaggage {
       display: inline-block; 
-      width: 307px; 
+      width: 275px; 
       font-size: 11px;
     }
-    .bookflightbutton {
+    .bookbutton {
       height: 25px; 
       font-size: 12px; 
-      margin-top: 10px; 
-      margin-left: 15px; 
       margin-bottom: 0px; 
       background-color: #68d09d; 
       color: #3c3b3b;
@@ -165,7 +169,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
       padding: 10px;
       color: #757575;
       border-radius: 5px;
-      background-color: #d5e0c3;
+      background-color: var(--searchBarBackground);
       width: 702px;
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
       display: inline-block;
@@ -186,7 +190,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
     max-width: 700px; 
     max-height: 35px; 
     padding-top: 5px; 
-    background-color: #bac; 
+    background-color: var(--searchHeadingBackground); 
     border-radius: 0px; 
     border: #828080 1px solid;
     margin-bottom: 0px; 
@@ -247,7 +251,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
       height: 52px; 
       font-size: 11px;
     }
-    .booktrainbutton {
+    <!--.booktrainbutton {
       height: 25px; 
       font-size: 12px; 
       margin-top: 10px; 
@@ -255,7 +259,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
       margin-bottom: 0px; 
       background-color: #68d09d; 
       color: #3c3b3b;
-    }
+    }-->
   
   .searchtitle {
       font-size:1em; 

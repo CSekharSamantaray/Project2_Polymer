@@ -5,7 +5,7 @@ import '@polymer/paper-button/paper-button.js';
 import '@vaadin/vaadin-date-picker/vaadin-date-picker.js';
 import '@polymer/iron-ajax/iron-ajax.js';
 import './shared-styles.js';
-
+import './record_detail.js';
 
 /**
  * @customElement
@@ -53,7 +53,7 @@ class AppRail extends PolymerElement {
         </div>
 
         <div id="divtrainslist" style="display: none;">
-          <dom-repeat items="[[trainslist]]">
+          <!--<dom-repeat items="[[trainslist]]">
             <template strip-whitespace="">
             <div class="traindetail">
               <div class="detailTrains"><b>{{item.trainname}}</b><br/><span>{{item.trainid}}</span></div>
@@ -63,7 +63,8 @@ class AppRail extends PolymerElement {
               <paper-button raised class="booktrainbutton" disabled on-click="">Book</paper-button>
             </div>
             </template>
-          </dom-repeat>
+          </dom-repeat>-->
+          <record-detail datalist="[[trainslist]]"></record-detail>
         </div>
 
         <iron-ajax

@@ -1,64 +1,64 @@
 {
     "trains":[
         {
-            "trainid": "6E-2125", 
-            "trainname": "Tejas Express",
+            "id": "6E-2125", 
+            "name": "Tejas Express",
             "departurefrom": "Bangalore",
             "departuretime": "06:25",
             "destination": "Mumbai",
             "arrivaltime": "09:45",
-            "actypes": "Executive Chair, First Class, Two-Tier Class", 
-            "nonactypes": "Sleeper Class, Second Class, General Class"
+            "detail1": "Executive Chair, First Class, Two-Tier Class", 
+            "detail2": "Sleeper Class, Second Class, General Class"
         },
         {
-            "trainid": "6E-5354", 
-            "trainname": "Duronto Express",
+            "id": "6E-5354", 
+            "name": "Duronto Express",
             "departurefrom": "Bangalore",
             "departuretime": "09:20",
             "destination": "Mumbai",
             "arrivaltime": "12:45",
-            "actypes": "Executive Chair, First Class, Two-Tier Class", 
-            "nonactypes": "Sleeper Class, Second Class, General Class"
+            "detail1": "Executive Chair, First Class, Two-Tier Class", 
+            "detail2": "Sleeper Class, Second Class, General Class"
         },
         {
-            "trainid": "I5-560 | I5-924", 
-            "trainname": "Shatabdi Express",
+            "id": "I5-560 | I5-924", 
+            "name": "Shatabdi Express",
             "departurefrom": "Bangalore",
             "departuretime": "13:20",
             "destination": "Mumbai",
             "arrivaltime": "16:45",
-            "actypes": "Executive Chair, First Class, Two-Tier Class", 
-            "nonactypes": "Sleeper Class, Second Class, General Class"
+            "detail1": "Executive Chair, First Class, Two-Tier Class", 
+            "detail2": "Sleeper Class, Second Class, General Class"
         },
         {
-            "trainid": "I5-993 | I5-1543", 
-            "trainname": "Rajdhani Express",
+            "id": "I5-993 | I5-1543", 
+            "name": "Rajdhani Express",
             "departurefrom": "Bangalore",
             "departuretime": "13:20",
             "destination": "Mumbai",
             "arrivaltime": "16:45",
-            "actypes": "Executive Chair, First Class, Two-Tier Class", 
-            "nonactypes": "Sleeper Class, Second Class, General Class"
+            "detail1": "Executive Chair, First Class, Two-Tier Class", 
+            "detail2": "Sleeper Class, Second Class, General Class"
         },
         {
-            "trainid": "6E-4012", 
-            "trainname": "Gatiman Express",
+            "id": "6E-4012", 
+            "name": "Gatiman Express",
             "departurefrom": "Bangalore",
             "departuretime": "11:00",
             "destination": "Mumbai",
             "arrivaltime": "14:10",
-            "actypes": "Executive Chair, First Class, Two-Tier Class", 
-            "nonactypes": "Sleeper Class, Second Class, General Class"
+            "detail1": "Executive Chair, First Class, Two-Tier Class", 
+            "detail2": "Sleeper Class, Second Class, General Class"
         },
         {
-            "trainid": "UK-995 | UK-851", 
-            "trainname": "Suvidha Express",
+            "id": "UK-995 | UK-851", 
+            "name": "Suvidha Express",
             "departurefrom": "Bangalore",
             "departuretime": "11:10",
             "destination": "Mumbai",
             "arrivaltime": "14:25",
-            "actypes": "Executive Chair, First Class, Two-Tier Class", 
-            "nonactypes": "Sleeper Class, Second Class, General Class"
+            "detail1": "Executive Chair, First Class, Two-Tier Class", 
+            "detail2": "Sleeper Class, Second Class, General Class"
         }
     ]
     }

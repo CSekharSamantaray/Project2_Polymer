@@ -1,100 +1,84 @@
 {
     "flights":[
         {
-            "flightid": "6E-2125", 
-            "flightname": "Indigo",
+            "id": "6E-2125", 
+            "name": "Indigo",
             "departurefrom": "Bangalore",
             "departuretime": "06:25",
             "destination": "Mumbai",
             "arrivaltime": "09:45",
-            "adultcheckin": "15 kgs (1 peice only)",
-            "adultcabin":"7 Kgs (1 piece only)",
-            "childcheckin":"10 kgs (1 peice only)",
-            "childcabin":"7 kgs (1 peice only)"
+            "detail1": "ADULT : 15 kgs (Baggage), 7 Kgs (Cabin)",
+            "detail2":"CHILD : 10 kgs (Baggage), 7 kgs (Cabin)"
         },
         {
-            "flightid": "6E-5354", 
-            "flightname": "Indigo",
+            "id": "6E-5354", 
+            "name": "Indigo",
             "departurefrom": "Bangalore",
             "departuretime": "09:20",
             "destination": "Mumbai",
             "arrivaltime": "12:45",
-            "adultcheckin": "15 kgs (1 peice only)",
-            "adultcabin":"7 Kgs (1 piece only)",
-            "childcheckin":"10 kgs (1 peice only)",
-            "childcabin":"7 kgs (1 peice only)"
+            "detail1": "ADULT : 15 kgs (Baggage), 7 Kgs (Cabin)",
+            "detail2":"CHILD : 10 kgs (Baggage), 7 kgs (Cabin)"
         },
         {
-            "flightid": "I5-560 | I5-924", 
-            "flightname": "AirAsia",
+            "id": "I5-560 | I5-924", 
+            "name": "AirAsia",
             "departurefrom": "Bangalore",
             "departuretime": "13:20",
             "destination": "Mumbai",
             "arrivaltime": "16:45",
-            "adultcheckin": "15 kgs (1 peice only)",
-            "adultcabin":"7 Kgs (1 piece only)",
-            "childcheckin":"10 kgs (1 peice only)",
-            "childcabin":"7 kgs (1 peice only)"
+            "detail1": "ADULT : 15 kgs (Baggage), 7 Kgs (Cabin)",
+            "detail2":"CHILD : 10 kgs (Baggage), 7 kgs (Cabin)"
         },
         {
-            "flightid": "I5-993 | I5-1543", 
-            "flightname": "AirAsia",
+            "id": "I5-993 | I5-1543", 
+            "name": "AirAsia",
             "departurefrom": "Bangalore",
             "departuretime": "13:20",
             "destination": "Mumbai",
             "arrivaltime": "16:45",
-            "adultcheckin": "15 kgs (1 peice only)",
-            "adultcabin":"7 Kgs (1 piece only)",
-            "childcheckin":"10 kgs (1 peice only)",
-            "childcabin":"7 kgs (1 peice only)"
+            "detail1": "ADULT : 15 kgs (Baggage), 7 Kgs (Cabin)",
+            "detail2":"CHILD : 10 kgs (Baggage), 7 kgs (Cabin)"
         },
         {
-            "flightid": "6E-4012", 
-            "flightname": "Indigo",
+            "id": "6E-4012", 
+            "name": "Indigo",
             "departurefrom": "Bangalore",
             "departuretime": "11:00",
             "destination": "Mumbai",
             "arrivaltime": "14:10",
-            "adultcheckin": "15 kgs (1 peice only)",
-            "adultcabin":"7 Kgs (1 piece only)",
-            "childcheckin":"10 kgs (1 peice only)",
-            "childcabin":"7 kgs (1 peice only)"
+            "detail1": "ADULT : 15 kgs (Baggage), 7 Kgs (Cabin)",
+            "detail2":"CHILD : 10 kgs (Baggage), 7 kgs (Cabin)"
         },
         {
-            "flightid": "UK-995 | UK-851", 
-            "flightname": "Vistara",
+            "id": "UK-995 | UK-851", 
+            "name": "Vistara",
             "departurefrom": "Bangalore",
             "departuretime": "11:10",
             "destination": "Mumbai",
             "arrivaltime": "14:25",
-            "adultcheckin": "15 kgs (1 peice only)",
-            "adultcabin":"7 Kgs (1 piece only)",
-            "childcheckin":"10 kgs (1 peice only)",
-            "childcabin":"7 kgs (1 peice only)"
+            "detail1": "ADULT : 15 kgs (Baggage), 7 Kgs (Cabin)",
+            "detail2":"CHILD : 10 kgs (Baggage), 7 kgs (Cabin)"
         },
         {
-            "flightid": "AI-851 | AI-528", 
-            "flightname": "Air India",
+            "id": "AI-851 | AI-528", 
+            "name": "Air India",
             "departurefrom": "Bangalore",
             "departuretime": "12:10",
             "destination": "Mumbai",
             "arrivaltime": "14:45",
-            "adultcheckin": "15 kgs (1 peice only)",
-            "adultcabin": "7 Kgs (1 piece only)",
-            "childcheckin":"10 kgs (1 peice only)",
-            "childcabin":"7 kgs (1 peice only)"
+            "detail1": "ADULT : 15 kgs (Baggage), 7 Kgs (Cabin)",
+            "detail2":"CHILD : 10 kgs (Baggage), 7 kgs (Cabin)"
         },
         {
-            "flightid": "SG-2871 | SG-3024", 
-            "flightname": "Spice Jet",
+            "id": "SG-2871 | SG-3024", 
+            "name": "Spice Jet",
             "departurefrom": "Bangalore",
             "departuretime": "13:40",
             "destination": "Mumbai",
             "arrivaltime": "16:55",
-            "adultcheckin": "15 kgs (1 peice only)",
-            "adultcabin":"7 Kgs (1 piece only)",
-            "childcheckin":"10 kgs (1 peice only)",
-            "childcabin":"7 kgs (1 peice only)"
+            "detail1": "ADULT : 15 kgs (Baggage), 7 Kgs (Cabin)",
+            "detail2":"CHILD : 10 kgs (Baggage), 7 kgs (Cabin)"
         }
     ]
     }
